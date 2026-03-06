@@ -1,0 +1,10 @@
+﻿__pycache__/
+*.pyc
+.venv/
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+results/
+ao-childes.txt
+.env
