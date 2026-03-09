@@ -1,0 +1,61 @@
+{
+  "n_lines": 893989,
+  "frequencies": {
+    "book": 6028,
+    "kitty": 239,
+    "cat": 2568,
+    "bird": 2184,
+    "cup": 1450,
+    "hat": 2122,
+    "puppy": 741,
+    "car": 4575,
+    "ball": 4013,
+    "dog": 2073,
+    "fish": 1594,
+    "doggy": 2
+  },
+  "repetition_rate_3sent": {
+    "book": 0.3203,
+    "car": 0.3462,
+    "ball": 0.4222,
+    "cat": 0.3765,
+    "bird": 0.3834,
+    "hat": 0.3962,
+    "dog": 0.3059,
+    "fish": 0.4059,
+    "cup": 0.3192,
+    "puppy": 0.3235,
+    "kitty": 0.3609,
+    "doggy": 0.5
+  },
+  "repetition_rate_5sent": {
+    "book": 0.3726,
+    "car": 0.4055,
+    "ball": 0.4877,
+    "cat": 0.4535,
+    "bird": 0.4443,
+    "hat": 0.4457,
+    "dog": 0.3523,
+    "fish": 0.4586,
+    "cup": 0.3616,
+    "puppy": 0.3669,
+    "kitty": 0.3913,
+    "doggy": 0.5
+  },
+  "burst_windows_3in10": {
+    "book": 4557,
+    "bird": 2066,
+    "cat": 2388,
+    "kitty": 215,
+    "hat": 1953,
+    "ball": 4236,
+    "cup": 1050,
+    "dog": 1445,
+    "car": 3826,
+    "fish": 1537,
+    "puppy": 561,
+    "doggy": 0
+  },
+  "two_noun_cooccurrence": 524,
+  "two_noun_cooccurrence_pct": 0.059
+}
