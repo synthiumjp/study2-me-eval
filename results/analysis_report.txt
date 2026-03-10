@@ -1,0 +1,137 @@
+======================================================================
+STUDY 2: PRE-REGISTERED ANALYSIS REPORT
+Scale Sensitivity of Referential Mechanisms in Child-Scale LMs
+======================================================================
+
+======================================================================
+H1: FAMILIAR-FAMILIAR SUPPRESSION — SIGN TEST PER CELL
+Pre-registered: anti-ME rate > 50% in ALL 9 cells
+Sign test: one-tailed, H0: median suppression = 0
+======================================================================
+
+Cell                 Anti-ME      Mean (nats)    Sign test p    Confirmed
+----------------------------------------------------------------------
+small_ep5            100/100        -1.14        7.89e-31       YES
+small_ep10           100/100        -1.47        7.89e-31       YES
+small_ep20           99/100        -1.49        7.97e-29       YES
+medium_ep5           100/100        -1.46        7.89e-31       YES
+medium_ep10          100/100        -1.43        7.89e-31       YES
+medium_ep20          98/100        -0.81        3.98e-27       YES
+large_ep5            100/100        -1.20        7.89e-31       YES
+large_ep10           98/100        -1.06        3.98e-27       YES
+large_ep20           85/100        -0.58        2.41e-13       YES
+
+H1 OVERALL: CONFIRMED — anti-ME in all 9 cells
+
+======================================================================
+H2: CONTEXT-DEPENDENCE DIAGNOSTIC — WILCOXON PER CELL
+Pre-registered: nonce_only >= full_context in ALL 9 cells
+======================================================================
+
+Cell                 nonce_only   full_ctx     Wilcoxon p     Confirmed
+----------------------------------------------------------------------
+small_ep5            5.0/8      2.2/8      0.0312         YES
+small_ep10           5.7/8      2.7/8      0.0312         YES
+small_ep20           5.3/8      2.8/8      0.0312         YES
+medium_ep5           6.7/8      2.4/8      0.0312         YES
+medium_ep10          6.9/8      3.3/8      0.0312         YES
+medium_ep20          6.4/8      3.2/8      0.0312         YES
+large_ep5            6.0/8      2.0/8      0.0312         YES
+large_ep10           6.2/8      2.9/8      0.0312         YES
+large_ep20           5.7/8      2.6/8      0.0312         YES
+
+H2 OVERALL: CONFIRMED — nonce_only >= full_context in all 9 cells
+
+======================================================================
+H3: REPETITION PRIMING DOSE-RESPONSE — KENDALL TAU-B PER CELL
+Pre-registered: >50% pairs monotonic in ALL 9 cells
+======================================================================
+
+Cell                 Monotonic    Mean slope     Kendall tau    tau p-val      Confirmed
+----------------------------------------------------------------------
+small_ep5            25/25         +0.576       +0.391         2.07e-07       YES
+                     Slope 95% CI: [+0.496, +0.655]
+small_ep10           25/25         +0.847       +0.480         1.98e-10       YES
+                     Slope 95% CI: [+0.718, +0.970]
+small_ep20           22/25         +0.965       +0.421         2.39e-08       YES
+                     Slope 95% CI: [+0.814, +1.119]
+medium_ep5           25/25         +1.080       +0.497         4.19e-11       YES
+                     Slope 95% CI: [+0.935, +1.221]
+medium_ep10          24/25         +1.138       +0.451         2.13e-09       YES
+                     Slope 95% CI: [+1.017, +1.261]
+medium_ep20          15/25         +0.896       +0.241         1.36e-03       YES
+                     Slope 95% CI: [+0.715, +1.084]
+large_ep5            20/25         +1.159       +0.477         2.51e-10       YES
+                     Slope 95% CI: [+0.997, +1.324]
+large_ep10           15/25         +0.976       +0.391         2.14e-07       YES
+                     Slope 95% CI: [+0.843, +1.117]
+large_ep20           12/25         +1.067       +0.317         2.66e-05       NO
+                     Slope 95% CI: [+0.876, +1.258]
+
+H3 OVERALL: PARTIALLY CONFIRMED (see details)
+
+======================================================================
+H4: NO ME AT ANY SCALE — CONJUNCTION OF H1
+======================================================================
+
+H4: CONFIRMED — no cell shows ME-consistent suppression
+
+======================================================================
+CONFIRMATORY SUMMARY
+======================================================================
+  H1 (anti-ME all cells):          CONFIRMED
+  H2 (diagnostic replicates):       CONFIRMED
+  H3 (monotonic priming):           PARTIALLY CONFIRMED
+  H4 (no ME at any scale):          CONFIRMED
+
+======================================================================
+EXPLORATORY ANALYSES (not pre-registered)
+======================================================================
+
+1. Model size vs priming magnitude:
+   Spearman r = +0.434, p = 0.0029
+   (Positive r = larger models show weaker priming / closer to zero)
+
+2. Training duration vs priming magnitude:
+   Spearman r = +0.335, p = 0.0243
+   (Positive r = more training shows weaker priming / closer to zero)
+
+3. Perplexity vs priming magnitude:
+   Spearman r = -0.533, p = 0.0002
+   (Negative r = better LMs (lower PPL) show weaker priming)
+
+4. Mean priming (nats) by size × epochs:
+                         5 ep      10 ep      20 ep
+   ---------------------------------------------
+   small           -1.14±0.19 -1.47±0.21 -1.49±0.27
+   medium          -1.46±0.09 -1.43±0.17 -0.81±0.06
+   large           -1.20±0.28 -1.06±0.21 -0.58±0.23
+
+5. Mean PPL by size × epochs:
+                         5 ep      10 ep      20 ep
+   ---------------------------------------------
+   small                57.8      48.5      42.0
+   medium               46.3      36.6      28.9
+   large                39.3      27.0      15.2
+
+6. Per-item priming strength (mean across all 45 models):
+   Pair                 Mean (nats)    SD         Anti-ME %
+   -------------------------------------------------------
+   cup/book             -2.104        1.001     98%
+   book/cup             -1.865        0.846     100%
+   cup/hat              -1.864        1.017     96%
+   ball/dog             -1.762        0.733     100%
+   hat/cup              -1.497        0.704     100%
+   car/book             -1.274        0.444     100%
+   ball/book            -1.261        0.531     98%
+   book/car             -1.155        0.603     98%
+   fish/bird            -1.064        0.469     98%
+   dog/ball             -1.035        0.472     100%
+   ball/car             -0.975        0.567     98%
+   car/hat              -0.900        0.467     96%
+   hat/car              -0.900        0.565     96%
+   book/ball            -0.781        0.363     98%
+   bird/fish            -0.764        0.390     96%
+   car/ball             -0.735        0.397     98%
+   cat/dog              -0.483        0.299     93%
+   dog/cat              -0.423        0.328     96%
